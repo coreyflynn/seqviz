@@ -14,7 +14,7 @@
 ---
 
 <div align="center">
-  <img width="600" src="https://media.giphy.com/media/KH8oxeI0eeu4rpAi0O/giphy.gif">
+  <img src="./demo/seqviz-gif-v2.gif">
 </div>
 
 ---
@@ -75,7 +75,7 @@ npm install seqviz
 
 <!-- cdn-example(cmd:) -->
 ```html
-<script src="https://cdn.latticeautomation.com/libs/seqviz/3.0.2/seqviz.min.js"></script>
+<script src="unpkg.com/seqviz"></script>
 ```
 <!-- /cdn-example -->
 
@@ -278,11 +278,11 @@ Searching supports the following nucleotide wildcards within the `query`.
 }
 ```
 
-`mismatch` is an `int` denoting the maximum allowable mismatch between the query and a match within the viewer's sequence (see: [edit distance](https://en.wikipedia.org/wiki/Edit_distance)).
+`mismatch` is an `int` denoting the maximum allowable mismatch between the query and a match within the viewer's sequence (see: [Hamming distance](https://en.wikipedia.org/wiki/Hamming_distance)).
 
 #### `options.onSearch (=null)`
 
-Callback executed after a search event. Called once on initial render and again after each KeyboardEvent specified within `options.searchNext`. Accepts a single `searchResults` argument: `(searchResults) => {}`. An example of a `searchResults` array is below.
+Callback executed after a search event. Called once on initial render. Accepts a single `searchResults` argument: `(searchResults) => {}`. An example of a `searchResults` array is below.
 
 ```js
 [
